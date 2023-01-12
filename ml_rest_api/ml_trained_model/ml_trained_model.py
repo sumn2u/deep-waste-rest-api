@@ -6,7 +6,10 @@ from os.path import normpath, join, dirname
 from typing import Any, Iterable, Dict
 import numpy as np
 import pandas as pd
-
+from tensorflow.keras.models  import load_model
+from tensorflow.keras.preprocessing.image import load_img
+from tensorflow.keras.applications.mobilenet import preprocess_input
+import ast
 # import joblib
 
 log: Logger = getLogger(__name__)
@@ -29,34 +32,24 @@ def init() -> None:
 
     # deserialise the ML model (and possibly other objects such as feature_list,
     # feature_selector) from pickle file(s):
-    #  global MODEL
-    #  MODEL = joblib.load(full_path('model.pkl'))
-    #  feature_list = joblib.load(full_path('feature_list.pkl'))
-    #  feature_selector = joblib.load(full_path('feature_selector.pkl'))
-
+    global MODEL
+    # MODEL = load_model(full_path('hack_mobilenet.h5'))
 
 def run(input_data: Iterable) -> Dict:
     """Makes a prediction using the trained ML model."""
     log.info("input_data:%s", input_data)
-    data: pd.DataFrame = (
-        input_data
-        if isinstance(input_data, pd.DataFrame)
-        else pd.DataFrame(input_data, index=[0])
-    )
 
-    # make the necessary transformations using pickled objects, e.g.
-    #  data = pd.get_dummies(data)
-    #  data = data.reindex(columns=feature_list, fill_value=0)
-    #  data = feature_selector.transform(data)
+    MODEL = load_model(full_path('model.h5'))
+    img = load_img(input_data['image'], target_size=(224, 224))
+    img = np.expand_dims(img, axis=0)
+    img = preprocess_input(img)
 
-    # then make (or mock) a prediction
-    #  prediction = MODEL.predict(data)
-
-    prediction = "mock_prediction"
-    if isinstance(prediction, np.ndarray):
-        prediction = prediction.tolist()[0]
-    log.info("data:%s - prediction:%s", data.values[0], [prediction])
-    return {"prediction": prediction}
+    waste_types = ast.literal_eval(input_data['classifiers'][0])
+    waste_pred = MODEL.predict(img)[0]
+    index = np.argmax(waste_pred)
+    waste_label = waste_types[index]
+    accuracy = "{0:.2f}".format(waste_pred[index] * 100)
+    return {"prediction": accuracy, "label": waste_label}
 
 
 def sample() -> Dict:
