@@ -36,7 +36,7 @@ jobs:
         uses: docker/build-push-action@v2.7.0
         with:
           push: true
-          tags: jgbustos/ml-rest-api:latest
+          tags: iamsuman/ml-rest-api:latest
       
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
