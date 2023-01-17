@@ -1,9 +1,6 @@
 # ml_rest_api
 
-[![CircleCI](https://img.shields.io/circleci/build/github/jgbustos/ml_rest_api/master?logo=CircleCI&label=CircleCI%20build)](https://circleci.com/gh/jgbustos/ml_rest_api)
-[![Build and publish Docker image](https://github.com/jgbustos/ml_rest_api/actions/workflows/main.yml/badge.svg)](https://github.com/jgbustos/ml_rest_api/actions/workflows/main.yml)
-[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=jgbustos_ml_rest_api&metric=alert_status)](https://sonarcloud.io/dashboard?id=jgbustos_ml_rest_api)
-[![Known Vulnerabilities](https://snyk.io/test/github/jgbustos/ml_rest_api/badge.svg)](https://app.snyk.io/org/jgbustos/projects)
+[![Build and publish Docker image](https://github.com/sumn2u/ml_rest_api/actions/workflows/main.yml/badge.svg)](https://github.com/sumn2u/ml_rest_api/actions/workflows/main.yml)
 
 A RESTful API to return predictions from a trained ML model, built with Python 3 and Flask-RESTX
 
@@ -13,7 +10,7 @@ First, open a command line interface and clone the GitHub repo in your workspace
 
 ```Powershell
 PS > cd $WORKSPACE_PATH$
-PS > git clone https://github.com/jgbustos/ml_rest_api
+PS > git clone https://github.com/sumn2u/ml_rest_api
 PS > cd ml_rest_api
 ```
 
@@ -21,7 +18,7 @@ Create and activate a Python virtual environment, then install the required Pyth
 
 ```Powershell
 PS > virtualenv venv
-PS > venv\scripts\activate.ps1
+PS > venv/scripts/activate.ps1
 (venv) PS > pip install -r requirements.txt
 ```
 
@@ -34,7 +31,7 @@ Once dependencies are installed, set up the project for development
 Finally, run the project:
 
 ```Powershell
-(venv) PS > python ml_rest_api\app.py
+(venv) PS > python ml_rest_api/app.py
 ```
 
 Open the URL <http://localhost:8888/api/> with your browser and see the sample Swagger documentation
@@ -105,12 +102,12 @@ The trained ML model is meant to be initialised and invoked to make predictions 
 
 ## Build automation
 
-This project is built into a container image using GitHub Actions and pushed to the Docker Hub at <https://hub.docker.com/r/jgbustos/ml-rest-api/>
+This project is built into a container image using GitHub Actions and pushed to the Docker Hub at <https://hub.docker.com/r/iamsuman/ml-rest-api/>
 
 ## Running the Docker container
 
 ```Powershell
-> docker run -d -p8888:8888 jgbustos/ml-rest-api:latest
+> docker run -d -p8888:8888 garbage-ml-api:latest
 ```
 
 Open the URL <http://localhost:8888/api/> with your browser and see the sample Swagger documentation
