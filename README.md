@@ -2,7 +2,8 @@
 
 [![Build and publish Docker image](https://github.com/sumn2u/ml_rest_api/actions/workflows/main.yml/badge.svg)](https://github.com/sumn2u/ml_rest_api/actions/workflows/main.yml)
 
-A RESTful API to return predictions from a trained ML model, built with Python 3 and Flask-RESTX
+A RESTful API to return predictions from a trained ML model, built with Python 3 and Flask-RESTX. The neural network used to trained the model can be 
+found [here](https://www.kaggle.com/code/sumn2u/garbage-classification).
 
 ## Development set-up instructions
 
