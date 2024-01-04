@@ -1,4 +1,4 @@
-# ml_rest_api
+# Deep Waste REST API
 
 [![Build and publish Docker image](https://github.com/sumn2u/ml_rest_api/actions/workflows/main.yml/badge.svg)](https://github.com/sumn2u/ml_rest_api/actions/workflows/main.yml)
 
