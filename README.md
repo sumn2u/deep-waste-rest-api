@@ -108,7 +108,7 @@ This project is built into a container image using GitHub Actions and pushed to 
 ## Running the Docker container
 
 ```Powershell
-> docker run -d -p8888:8888 garbage-ml-api:latest
+> docker run -d -p 8888:8888 garbage-ml-api:latest
 ```
 
 Open the URL <http://localhost:8888/api/> with your browser and see the sample Swagger documentation
