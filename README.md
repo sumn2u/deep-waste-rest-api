@@ -8,6 +8,8 @@ found [here](https://www.kaggle.com/code/sumn2u/garbage-classification).
 ## Preview
 <https://deep-waste-rest-api.fly.dev/api/>
 
+<img alt="Model Predections"  src="./model-response.png">
+
 ## Development set-up instructions
 
 First, open a command line interface and clone the GitHub repo in your workspace
