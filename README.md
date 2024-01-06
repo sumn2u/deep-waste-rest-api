@@ -5,6 +5,9 @@
 A RESTful API to return predictions from a trained ML model, built with Python 3 and Flask-RESTX. The neural network used to trained the model can be 
 found [here](https://www.kaggle.com/code/sumn2u/garbage-classification).
 
+## Preview
+<https://deep-waste-rest-api.fly.dev/api/>
+
 ## Development set-up instructions
 
 First, open a command line interface and clone the GitHub repo in your workspace
@@ -108,7 +111,7 @@ This project is built into a container image using GitHub Actions and pushed to 
 ## Running the Docker container
 
 ```Powershell
-> docker run -d -p 8888:8888 garbage-ml-api:latest
+> docker run -d -p 8888:8888 ml-rest-api:latest
 ```
 
 Open the URL <http://localhost:8888/api/> with your browser and see the sample Swagger documentation

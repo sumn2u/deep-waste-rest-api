@@ -49,7 +49,7 @@ def run(input_data: Iterable) -> Dict:
     index = np.argmax(waste_pred)
     waste_label = waste_types[index]
     accuracy = "{0:.2f}".format(waste_pred[index] * 100)
-    return {"prediction": accuracy, "label": waste_label}
+    return {"accuracy": accuracy, "label": waste_label}
 
 
 def sample() -> Dict:

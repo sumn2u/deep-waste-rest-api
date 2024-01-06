@@ -4,7 +4,7 @@ import warnings
 from logging import Logger, getLogger
 import logging.config
 from typing import List
-from flask import Flask
+from flask import Flask, redirect
 from flask_wtf import CSRFProtect  # pylint: disable=unused-import
 from ml_rest_api.settings import get_value
 from ml_rest_api.ml_trained_model.wrapper import trained_model_wrapper
@@ -71,6 +71,11 @@ logging.config.fileConfig(
 )
 log: Logger = getLogger(__name__)
 initialize_app(APP)
+
+# Add a route to redirect "/" to "/api"
+@APP.route('/')
+def root_redirect():
+    return redirect('/api')
 
 if __name__ == "__main__":
     main()
