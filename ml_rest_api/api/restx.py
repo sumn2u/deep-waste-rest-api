@@ -24,8 +24,8 @@ blueprint = Blueprint("api", __name__, url_prefix="/api")
 api = Api(  # pylint: disable=invalid-name
     blueprint,
     version="0.1",
-    title="Machine Learning REST API",
-    description="A RESTful API to return predictions from a trained ML model, \
+    title="D.WASTE REST API",
+    description="A RESTful API to return predictions from a trained waste classification ML model, \
           built with Python 3 and Flask-RESTX",
     format_checker=FormatChecker(
         formats=(
