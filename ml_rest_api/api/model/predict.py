@@ -16,7 +16,7 @@ upload_parser = reqparse.RequestParser()
 upload_parser.add_argument('file', location='files',
                            type=FileStorage, required=True)
 upload_parser.add_argument('classifiers',
-                           required=True, action='append', help="['cardboard', 'glass', 'metal', 'paper', 'plastic', 'trash']")
+                           required=True, action='append', help="['battery', 'biological', 'cardboard', 'clothes', 'glass', 'metal', 'paper','plastic','shoes','trash']")
 
 
 ns = api.namespace(  # pylint: disable=invalid-name
