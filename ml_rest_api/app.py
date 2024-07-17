@@ -12,6 +12,7 @@ from ml_rest_api.api.restx import blueprint
 import ml_rest_api.api.health.liveness  # pylint: disable=unused-import
 import ml_rest_api.api.health.readiness  # pylint: disable=unused-import
 import ml_rest_api.api.model.predict  # pylint: disable=unused-import
+import ml_rest_api.api.segmentation.background_removal  # pylint: disable=unused-import`
 from flask_cors import CORS
 
 IN_UWSGI: bool = True
