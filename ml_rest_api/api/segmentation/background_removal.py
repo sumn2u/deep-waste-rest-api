@@ -4,6 +4,7 @@ from flask_restx import Resource,  reqparse
 import PIL
 from PIL import Image
 import io
+import os
 from ml_rest_api.api.restx import api
 from ml_rest_api.ml_trained_model.ml_trained_model import full_path
 # from ml_rest_api.ml_trained_model.image_segmentation import init, run
@@ -48,16 +49,20 @@ class SegmentationBackgroundRemoval(Resource):
             return {'error': 'No selected file'}, 400
         
         img_bytes = file.read()
-
         input_image = Image.open(io.BytesIO(img_bytes)).convert("RGBA")
-        
+
         # Use rembg to remove the background
         output_image = remove(input_image)
-        
+
         # Save the result image temporarily
         result_file = tempfile.NamedTemporaryFile(suffix='.png', delete=False)
         result_file.close()
-        
+
         output_image.save(result_file.name, format="PNG")
-        
-        return send_file(result_file.name, mimetype='image/png', as_attachment=True, download_name='background_removed.png')
+
+        # Ensure the correct filename with .png extension
+        original_filename = file.filename
+        base_filename = os.path.splitext(original_filename)[0]
+        download_filename = f"bg_removed_{base_filename}.png"
+
+        return send_file(result_file.name, mimetype='image/png', as_attachment=True, download_name=download_filename)
