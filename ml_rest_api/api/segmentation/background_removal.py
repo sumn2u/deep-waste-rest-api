@@ -16,6 +16,10 @@ import numpy as np
 
 from rembg import remove
 
+# Initialize the model
+from ml_rest_api.ml_trained_model.ml_trained_model import init as model_init
+model_init()
+
 
 upload_parser = reqparse.RequestParser()
 upload_parser.add_argument('file', location='files', type=FileStorage, required=True)
