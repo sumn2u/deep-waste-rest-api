@@ -1,0 +1,191 @@
+{
+    "questions": [
+           {
+             "id": "1",
+             "type": "single-choice",
+             "text": "How would you describe your skin’s oil production throughout the day?",
+             "options": [
+               {
+                 "text": "My skin gets shiny and oily in just a few hours.",
+                 "points": 3
+               },
+               {
+                 "text": "I have dry patches and my skin feels tight.",
+                 "points": 2
+               },
+               {
+                 "text": "My skin is normal but gets oily in certain areas (like my T-sone).",
+                 "points": 1
+               },
+               {
+                 "text": "I don't experience much oil but i do get redness or irritation.",
+                 "points": 2
+               }
+             ]
+           },
+           {
+             "id": "2",
+             "type": "single-choice",
+             "text": "Which best describes how your skin feels after washing?",
+             "options": [
+               {
+                 "text": "Clean, but shiny after a few hours.",
+                 "points": 3
+               },
+               {
+                 "text": "Clean, but feels tight and dry.",
+                 "points": 1
+               },
+               {
+                 "text": "My skin feels fine, no tightness or oil.",
+                 "points": 2
+               },
+               {
+                 "text": "My skin feels sensitive, a little irritated after using certain products.",
+                 "points": 1
+               }
+             ]
+           },
+           {
+             "id": "3",
+             "type": "single-choice",
+             "text": "Do you experience breakouts? If so, how frequently?",
+             "options": [
+               {
+                 "text": "Regular breakouts, especially around my forehead, chin, or cheeks.",
+                 "points": 3
+               },
+               {
+                 "text": "I rarely break out, but I do get clogged pores or blackheads.",
+                 "points": 2
+               },
+               {
+                 "text": "I don’t break out often, but I have some dry patches.",
+                 "points": 1
+               },
+               {
+                 "text": "Breakouts are rare for me, but I struggle with texture, redness, or sensitivity.",
+                 "points": 1
+               }
+             ]
+           },
+           {
+             "id": "4",
+             "type": "single-choice",
+             "text": "How would you describe your skin’s texture?",
+             "options": [
+               {
+                 "text": "I have noticeable bumps or enlarged pores.",
+                 "points": 3
+               },
+               {
+                 "text": "My skin is mostly smooth but feels dry in some spots.",
+                 "points": 1
+               },
+               {
+                 "text": "My skin is balanced and smooth, but it’s a little oily in areas.",
+                 "points": 2
+               },
+               {
+                 "text": "My skin feels rough, sensitive, or has signs of aging (fine lines/wrinkles).",
+                 "points": 2
+               }
+             ]
+           },
+           {
+             "id": "5",
+             "type": "single-choice",
+             "text": "How does your skin react to new products?",
+             "options": [
+               {
+                 "text": "I don’t have many issues with new products.",
+                 "points": 3
+               },
+               {
+                 "text": "My skin gets irritated easily.",
+                 "points": 1
+               },
+               {
+                 "text": "I’m careful about new products because they can trigger breakouts.",
+                 "points": 2
+               },
+               {
+                 "text": "My skin reacts to strong or harsh products (e.g., stinging, redness).",
+                 "points": 2
+               }
+             ]
+           },
+           {
+             "id": "6",
+             "type": "multiple-choice",
+             "text": "Which concerns best match your current skin goals? (Select up to 3)",
+             "options": [
+               {
+                 "text": "Managing breakouts and controlling oil",
+                 "points": 3
+               },
+               {
+                 "text": "Soothing dryness and flakiness",
+                 "points": 1
+               },
+               {
+                 "text": "Hydrating without feeling greasy",
+                 "points": 2
+               },
+               {
+                 "text": "Reducing redness and calming sensitive areas",
+                 "points": 1
+               },
+               {
+                 "text": "Targeting fine lines, wrinkles, or loss of elasticity",
+                 "points": 2
+               }
+             ]
+           },
+           {
+             "id": "7",
+             "type": "single-choice",
+             "text": "What age range are you in? (Helps customize recommendations)",
+             "options": [
+               {
+                 "text": "Under 18",
+                 "points": 0
+               },
+               {
+                 "text": "18-24",
+                 "points": 1
+               },
+               {
+                 "text": "25-34",
+                 "points": 2
+               },
+               {
+                 "text": "35-44",
+                 "points": 3
+               },
+               {
+                 "text": "45-54",
+                 "points": 3
+               },{
+                 "text": "55+",
+                 "points": 3
+               }
+             ]
+           },
+           {
+             "id": "8",
+             "type": "single-choice",
+             "text": "Would you like to receive personalized product recommendations and exclusive updates about ENME?",
+             "options": [
+               {
+                 "text": "Yes",
+                 "points": 0
+               },
+               {
+                 "text": "No",
+                 "points": 0
+               }
+             ]
+           }
+    ]
+}

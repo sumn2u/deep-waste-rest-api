@@ -13,6 +13,8 @@ from ml_rest_api.api.restx import blueprint
 import ml_rest_api.api.health.liveness  # pylint: disable=unused-import
 import ml_rest_api.api.health.readiness  # pylint: disable=unused-import
 import ml_rest_api.api.model.predict  # pylint: disable=unused-import
+import ml_rest_api.api.questions  # pylint: disable=unused-import
+import ml_rest_api.api.recommendations  # pylint: disable=unused-import
 import ml_rest_api.api.segmentation.background_removal  # pylint: disable=unused-import`
 import ml_rest_api.api.model.background_removal_prediction  # pylint: disable=unused-import`
 from flask_cors import CORS

@@ -1,0 +1,120 @@
+{
+    "recommendations": [
+        {
+        "skinType": "Oily/Acne Prone Skin Type",
+        "scoreRange": [10, 30],
+        "url": "https://www.emetheapp.com/oilyacne-prone-skin-type",
+        "image": "https://images.squarespace-cdn.com/content/v1/670a1c3ce828a620ffa41741/554a233c-5f6b-4f9c-8ce6-da3e2b94f0fa/Skin%E2%9C%A8%E2%9C%A8.jpeg",
+        "products": [
+            {
+            "category": "Cleanser",
+            "name": "Kiehl’s Calendula Deep Cleansing Foaming Face Wash",
+            "description": "A gentle cleanser that removes oil and impurities without over-drying.",
+            "image": "https://images.squarespace-cdn.com/content/v1/670a1c3ce828a620ffa41741/100da825-bac8-4adb-8cc3-b36b153ad381/713Lyr4dvzL._SL1500_.jpg",
+            "url": "https://rstyle.me/+xjelyTaUEQXcHR-dsGADnQ"
+            },
+            {
+            "category": "Treatment/Serum",
+            "name": "The Ordinary Niacinamide 10% + Zinc 1%",
+            "description": "Targets blemishes, reduces oil, and minimizes pores.",
+            "image": "https://images.squarespace-cdn.com/content/v1/670a1c3ce828a620ffa41741/c6ebe944-7961-4fe7-ad26-3b3d39c8418c/Niacinamide+10%25+%2B+Zinc+1%25+Oil+Control+Serum++-+The+Ordinary+_+Sephora.jpeg",
+            "url": "https://rstyle.me/+UJYo69Er4C-khsFYLjaeww"
+            },
+            {
+            "category": "Moisturizer",
+            "name": "Tatcha The Water Cream",
+            "description": "Oil-free moisturizer that provides hydration and refines skin.",
+            "image": "https://images.squarespace-cdn.com/content/v1/670a1c3ce828a620ffa41741/dfd6e6a5-0447-4512-809a-1eab53acc1ff/The+Water+Cream.jpeg",
+            "url": "https://rstyle.me/+63lYrOAvfveVOUo-bbhTaw"
+            }
+        ]
+        },
+        {
+            "skinType": "Dry/Sensitive Skin Type",
+            "scoreRange": [31, 50],
+            "url": "https://www.emetheapp.com/dry-sensitive-skintype",
+            "image": "https://images.squarespace-cdn.com/content/v1/670a1c3ce828a620ffa41741/ce76ae18-0389-4cd1-9957-f930b1a93eff/If+You+Have+Oily+Skin%2C+Should+You+Moisturize+at+Night_+%281%29.jpeg",
+            "products": [
+              {
+                "category": "Cleanser",
+                "name": "Fresh Soy Makeup Removing Face Wash",
+                "description": "Gentle gel cleanser that removes makeup and hydrates skin.",
+                "image": "https://images.squarespace-cdn.com/content/v1/670a1c3ce828a620ffa41741/5d35a25c-5a0d-480e-9c58-3dfc36b51156/FRESH+_+Soy+Face+Cleanser+-+Original+_+5oz.jpg",
+                "url": "https://rstyle.me/+VSiiDmahbAlQ2JlBSlSimA"
+              },
+              {
+                "category": "Treatment/Serum",
+                "name": "The Ordinary Hyaluronic Acid 2% + B5",
+                "description": "Provides deep hydration and smoothens skin.",
+                "image": "https://images.squarespace-cdn.com/content/v1/670a1c3ce828a620ffa41741/c6ebe944-7961-4fe7-ad26-3b3d39c8418c/Niacinamide+10%25+%2B+Zinc+1%25+Oil+Control+Serum++-+The+Ordinary+_+Sephora.jpeg",
+                "url": "https://rstyle.me/+UJYo69Er4C-khsFYLjaeww"
+              },
+              {
+                "category": "Moisturizer",
+                "name": "Drunk Elephant Lala Retro Whipped Moisturizer with Ceramides",
+                "description": "Rich moisturizer that strengthens the skin barrier.",
+                "image": "https://images.squarespace-cdn.com/content/v1/670a1c3ce828a620ffa41741/cff22645-a9cf-4de9-ac28-a682ec6e8da2/Drunk+Elephant+Lala+Retro%E2%84%A2+Whipped+Moisturizer+with+Ceramides.jpeg",
+                "url": "https://rstyle.me/+63lYrOAvfveVOUo-bbhTaw"
+              }
+            ]
+          },
+          {
+            "skinType": "Normal/Combo Skin Type",
+            "scoreRange": [51, 70],
+            "url": "https://www.emetheapp.com/nomalcombo-skin-type",
+            "image": "https://images.squarespace-cdn.com/content/v1/670a1c3ce828a620ffa41741/c067c38c-e23a-4809-b9d9-55501ee00117/Model+Aesthetic.jpeg",
+            "products": [
+              {
+                "category": "Cleanser",
+                "name": "Youth To The People Superfood Antioxidant Cleanser",
+                "description": "Antioxidant-rich gel cleanser for balanced cleansing.",
+                "image": "https://images.squarespace-cdn.com/content/v1/670a1c3ce828a620ffa41741/9f5ae78c-070e-413f-8117-cd9ab80f5ba0/Superfood+Antioxidant+Cleanser+-+Youth+To+The+People+_+Sephora.jpeg",
+                "url": "https://rstyle.me/+eaDOwJ8z8Ev0WWhqAHMUGA"
+              },
+              {
+                "category": "Toner",
+                "name": "Fresh Rose & Hyaluronic Acid Deep Hydration Toner",
+                "description": "Soothing toner that deeply hydrates and preps the skin.",
+                "image": "https://images.squarespace-cdn.com/content/v1/670a1c3ce828a620ffa41741/357f42b0-cf6f-457b-ad92-159f52bbc3a9/Rose+Deep+Hydration+Facial+Toner.jpeg",
+                "url": "https://rstyle.me/+WDNdROI2Tner-ECc0ur-tw"
+              },
+              {
+                "category": "Moisturizer",
+                "name": "Belif The True Cream Aqua Bomb",
+                "description": "Lightweight gel-cream for hydration and smooth skin.",
+                "image": "https://images.squarespace-cdn.com/content/v1/670a1c3ce828a620ffa41741/41752a3b-ab21-4386-9091-3755bd249c20/The+True+Cream+-+Aqua+Bomb+Hydrating+Moisturizer.jpeg",
+                "url": "https://rstyle.me/+4y9JCXQyLfwZsQuoncYSjw"
+              }
+            ]
+          },
+          {
+            "skinType": "Maturing/Aging Skin Type",
+            "scoreRange": [71, 100],
+            "url": "https://www.emetheapp.com/oilyacne-prone-skin-results-3",
+            "image": "https://images.squarespace-cdn.com/content/v1/670a1c3ce828a620ffa41741/adac5cae-dbe2-4c05-b3a6-c3a1850e13af/Free+Photo+_+Close+up+on+face+pores+texture+%281%29.jpeg",
+            "products": [
+              {
+                "category": "Cleanser",
+                "name": "Tatcha The Rice Wash Skin-Softening Cleanser",
+                "description": "Creamy cleanser that softens and hydrates aging skin.",
+                "image": "https://images.squarespace-cdn.com/content/v1/670a1c3ce828a620ffa41741/da927caa-a48e-41e8-ac7a-59450c72fda2/The+Rice+Wash.jpeg",
+                "url": "https://rstyle.me/+ZorYT2r8Y6DyMUNEq8P0gg"
+              },
+              {
+                "category": "Serum",
+                "name": "Sunday Riley A+ High-Dose Retinoid Serum",
+                "description": "Targets fine lines, wrinkles, and uneven skin tone.",
+                "image": "https://images.squarespace-cdn.com/content/v1/670a1c3ce828a620ffa41741/a81627dd-2200-44dd-9c02-427ddb5313d5/4d5652ec224aeda17548be338ffe6056.jpg",
+                "url": "https://rstyle.me/+ihsxVvIsWgAqbdsKwbfxnw"
+              },
+              {
+                "category": "Moisturizer",
+                "name": "Peter Thomas Roth Water Drench Hyaluronic Cloud Cream Hydrating Moisturizer",
+                "description": "Intense hydration with 30% hyaluronic acid.",
+                "image": "https://images.squarespace-cdn.com/content/v1/670a1c3ce828a620ffa41741/62457666-8beb-487a-b63d-7c072c11fafc/Water+Drench+Hyaluronic+Cloud+Cream+Hydrating+Moisturizer.jpeg",
+                "url": "https://rstyle.me/+PEaGfYkqncsr8dDuymeqAw"
+              }
+            ]
+          }
+    ]
+}
