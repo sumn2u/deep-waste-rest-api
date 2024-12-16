@@ -66,12 +66,9 @@ def main() -> None:
         get_value("FLASK_SERVER_NAME"),
     )
 
-      # Get the port from environment variables, default to 5000 if not set
-    port = os.getenv("PORT", get_value("FLASK_PORT", 5000))
-
     APP.run(
         debug=get_value("FLASK_DEBUG"),
-        port=port,
+        port=get_value("FLASK_PORT"),
         host=get_value("FLASK_HOST"),
     )
 
