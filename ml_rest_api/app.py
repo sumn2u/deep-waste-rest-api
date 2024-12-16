@@ -65,9 +65,13 @@ def main() -> None:
         "***** Starting development server at http://%s/api/ *****",
         get_value("FLASK_SERVER_NAME"),
     )
+
+      # Get the port from environment variables, default to 5000 if not set
+    port = os.getenv("PORT", get_value("FLASK_PORT", 5000))
+
     APP.run(
         debug=get_value("FLASK_DEBUG"),
-        port=get_value("FLASK_PORT"),
+        port=port,
         host=get_value("FLASK_HOST"),
     )
 
