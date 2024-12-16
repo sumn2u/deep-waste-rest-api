@@ -1,0 +1,1 @@
+web: gunicorn ml_rest_api.app:APP
