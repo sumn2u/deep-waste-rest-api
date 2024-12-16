@@ -9,3 +9,4 @@ pandas==2.2.3
 Pillow==10.4.0
 flask-cors==3.0.10
 rembg==2.0.57
+gunicorn>=23,<24
