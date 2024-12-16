@@ -5,6 +5,7 @@ from logging import Logger, getLogger
 import logging.config
 from typing import List
 from flask import Flask, redirect
+from markupsafe import Markup
 from flask_wtf import CSRFProtect  # pylint: disable=unused-import
 from ml_rest_api.settings import get_value
 from ml_rest_api.ml_trained_model.wrapper import trained_model_wrapper
