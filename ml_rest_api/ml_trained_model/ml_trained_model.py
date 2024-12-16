@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 import tensorflow as tf
 
-# from tensorflow.keras.models  import load_model
+from tensorflow.keras.models  import load_model
 from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.applications.mobilenet import preprocess_input
 import ast
@@ -29,21 +29,30 @@ def init() -> None:
     """Loads the ML trained model (plus ancillary files) from file."""
     from time import sleep  # pylint: disable=import-outside-toplevel
 
-    model_path = full_path("mobilenet_model")
+    model_path = full_path("mobilenetv2_skin_classification_model.keras")
     log.debug("Initialise model from file %s", model_path)
     sleep(5)  # Fake delay to emulate a large model that takes a long time to load
     
     # feature_selector) from pickle file(s):
     global MODEL, MODEL_SERVING_FUNCTION
-    MODEL = tf.saved_model.load(model_path)
-    MODEL_SERVING_FUNCTION = MODEL.signatures['serving_default']
+    MODEL = load_model(model_path)
+    try:
+        MODEL = load_model(model_path)
+        # MODEL_SERVING_FUNCTION = MODEL.signatures.get('serving_default', None)
+        log.info("Model loaded successfully.")
+    except FileNotFoundError:
+        log.error("Model file not found at %s", model_path)
+        raise
+    except Exception as e:
+        log.error(f"Failed to load model: {e}")
+        raise
 
 def run(input_data: Dict[str, Any]) -> Dict[str, Any]:
     """Makes a prediction using the trained ML model."""
     log.info("input_data:%s", input_data)
 
     # Ensure MODEL is loaded
-    if MODEL is None or MODEL_SERVING_FUNCTION is None:
+    if MODEL is None:
         raise ValueError("Model is not loaded. Please call init() first.")
 
     # Load and preprocess the image
@@ -52,21 +61,15 @@ def run(input_data: Dict[str, Any]) -> Dict[str, Any]:
     img_array = np.expand_dims(img, axis=0)
     img_array = preprocess_input(img_array)
 
-    # Make a prediction using the serving_default signature
-    input_tensor = tf.convert_to_tensor(img_array, dtype=tf.float32)
-    predictions = MODEL_SERVING_FUNCTION(input_tensor)
+    # Use the predict method of the Keras model
+    model_pred = MODEL.predict(img_array)[0]
 
-    # Log the keys of the predictions dictionary
-    log.debug(f"Prediction keys: {predictions.keys()}")
-    # Extract the prediction results
-    prediction_key = 'dense_1'
-    waste_pred = predictions[prediction_key].numpy()[0]
-    waste_types = ast.literal_eval(input_data['classifiers'][0])
-    index = np.argmax(waste_pred)
-    waste_label = waste_types[index]
-    accuracy = "{0:.2f}".format(waste_pred[index] * 100)
+    classification_types = ast.literal_eval(input_data['classifiers'][0])
+    index = np.argmax(model_pred)
+    label = classification_types[index]
+    accuracy = "{0:.2f}".format(model_pred[index] * 100)
     
-    return {"accuracy": accuracy, "label": waste_label}
+    return {"accuracy": accuracy, "label": label}
 
 
 def sample() -> Dict:
