@@ -11,3 +11,4 @@ flask-cors==3.0.10
 rembg==2.0.57
 gunicorn>=23,<24
 matplotlib==3.7.1
+tensorflow==2.15.0
