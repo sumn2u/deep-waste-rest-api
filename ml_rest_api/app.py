@@ -21,8 +21,6 @@ from flask_cors import CORS
 
 IN_UWSGI: bool = True
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
-
 try:
     # pyright: reportMissingImports=false
     import uwsgi  # pylint: disable=unused-import
