@@ -10,4 +10,4 @@ Pillow==10.4.0
 flask-cors==3.0.10
 rembg==2.0.57
 tensorflow==2.16.2
-matplotlib==3.10.0
+matplotlib==3.9.4

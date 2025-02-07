@@ -1,6 +1,7 @@
 """This module implements the ModelPredict class."""
 import json
 from typing import Type, Dict
+import uuid;
 from aniso8601 import parse_date, parse_datetime
 from flask import request
 from flask_restx import Resource, Model, fields, reqparse
@@ -8,6 +9,7 @@ from ml_rest_api.api.restx import api, FlaskApiReturnType, MLRestAPINotReadyExce
 from ml_rest_api.ml_trained_model.wrapper import trained_model_wrapper
 from ml_rest_api.ml_trained_model.ml_trained_model import full_path
 from werkzeug.datastructures import FileStorage
+import os;
 
 """
 This will be used to validate input and automatically generate the Swagger prototype.
@@ -16,7 +18,7 @@ upload_parser = reqparse.RequestParser()
 upload_parser.add_argument('file', location='files',
                            type=FileStorage, required=True)
 upload_parser.add_argument('classifiers',
-                           required=True, action='append', help="['battery', 'biological', 'cardboard', 'clothes', 'glass', 'metal', 'paper','plastic','shoes','trash']")
+                           required=True, action='append', help="['cardboard', 'glass', 'metal', 'paper','plastic', 'trash']")
 
 
 ns = api.namespace(  # pylint: disable=invalid-name
@@ -52,7 +54,8 @@ class ModelPredict(Resource):
         if request.files['file'].filename == '':
             return { "message": 'No selected file'}, 400
 
-        temp_file = full_path("temp/upload.jpg")
+        filename = f"{uuid.uuid4()}.jpg"
+        temp_file = full_path(f"temp/{filename}")
         file = request.files['file']
         if file.filename == '':
             return { 'error': 'No selected file' }, 400
@@ -60,10 +63,16 @@ class ModelPredict(Resource):
         with open(temp_file, mode="wb") as jpg:
             jpg.write(img_bytes)
         
-        args = upload_parser.parse_args()
-        model_dict: Dict = {
-            "image": temp_file,
-            "classifiers": args['classifiers']
-        }
-        ret = trained_model_wrapper.run(model_dict)
+        try:
+            args = upload_parser.parse_args()
+            model_dict: Dict = {
+                "image": temp_file,
+                "classifiers": args['classifiers']
+            }
+            ret = trained_model_wrapper.run(model_dict)
+        finally:
+            # Ensure the temporary file is deleted even if an error occurs
+            if os.path.exists(temp_file):
+                os.remove(temp_file)
+
         return ret, 200

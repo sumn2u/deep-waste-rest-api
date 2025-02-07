@@ -10,7 +10,7 @@ def get_value(key: str) -> Any:
         "FLASK_SERVER_NAME": "localhost:8888",
         "FLASK_HOST": "0.0.0.0",
         "FLASK_PORT": 8888,
-        "FLASK_DEBUG": True,  # Do not use debug mode in production
+        "FLASK_DEBUG": False,  # Do not use debug mode in production
         # Flask-RESTX settings
         "SWAGGER_UI_DOC_EXPANSION": "list",
         "RESTX_VALIDATE": True,
