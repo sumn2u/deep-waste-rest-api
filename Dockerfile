@@ -1,16 +1,16 @@
 # This is my own base image from the Docker Hub
-# See https://github.com/jgbustos/ml-model-base-docker
-FROM jgbustos/ml-model-base:latest
+# See https://github.com/sumn2u/ml-model-base-docker
+FROM iamsuman/ml-model-base:latest
 
 # Parent image to run under Nginx+uWSGI
 # Python 3.10 on Debian
-# FROM tiangolo/uwsgi-nginx-flask:python3.10
+FROM tiangolo/uwsgi-nginx-flask:python3.10
 
 # Parent image to run under Meinheld+Gunicorn
 # Python 3.9 on Debian
 # FROM tiangolo/meinheld-gunicorn-flask:python3.9
 
-LABEL maintainer="j.garciadebustos@godeltech.com"
+LABEL maintainer="info@sumankunwar.com.np"
 
 COPY requirements.txt /app/
 
@@ -31,5 +31,5 @@ EXPOSE 8888
 ENV PYTHONPATH "${PYTHONPATH}:/app/ml_rest_api"
 
 # Comment the two lines below to run under Nginx+uWSGI
-ENTRYPOINT ["python3"]
-CMD ["ml_rest_api/app.py"]
+# ENTRYPOINT ["python3"]
+# CMD ["ml_rest_api/app.py"]
